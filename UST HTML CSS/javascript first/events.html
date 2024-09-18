@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Events</title>
+
+    <script>
+          function sayGreetings(){
+
+            alert("OLA Coma Sava")
+          }
+
+          function showSeason(){
+            var month=new Date().getMonth();
+            if(month >=6 && month <=9){
+                alert("Monsoon season")}
+          }
+
+          function green(){
+            document.getElementById("greendiv").style.backgroundColor='green';
+            document.getElementById("greendiv").style.color='white';
+            document.getElementById("greendiv").style.fontSize='30px';
+       
+            document.getElementById("greendiv").style.textAlign='center';
+            
+            
+
+          }
+
+          function blue(){
+            document.getElementById("bluediv").style.backgroundColor='blue';
+            document.getElementById("bluediv").style.color='yellow';
+            document.getElementById("bluediv").style.fontSize='40px';
+            document.getElementById("bluediv").style.fontWeight='400';
+
+          }
+
+
+          function validate(){
+            alert("Validating.........")
+            var uname = document.getElementById("uid").value;
+            var pass = document.getElementById("pid").value;
+            
+            if(uname.length > 8 && pass.length >8){
+                alert(uname + pass);
+                return true;
+
+            }
+            else
+                return false;
+          }
+
+        
+    </script>
+</head>
+<body>
+
+    <form action="" method="post" onsubmit="return validate()">
+        <fieldset>
+        <legend>Login form</legend><br>
+        <label for="username">username</label>
+            <input type="text" name="username" id="uid"><br>
+        <label for="password">password</label>
+            <input type="pasword" name="password" id="pid"><br>
+        
+            <input type="submit" value="Go">
+            <input type="reset" value="clear">
+
+        <!-- <input type="button" value="greet" onclick="sayGreetings()">
+        <input type="button" value="season" onclick="showSeason()">
+        <input type="button" value="green" onclick="green()">
+        <input type="button" value="blue" onclick="blue()"> -->
+    </fieldset>
+    </form>   
+        <!-- <div id="greendiv">
+                <p>Hello</p>
+                 <p>How are you</p> 
+                <br>
+                <br>
+                <br>
+        </div>
+
+        <div id="bluediv">
+            heloo
+            <br>
+            <br>
+            <br>
+        </div> -->
+       
+
+
+   
+    
+</body>
+</html>

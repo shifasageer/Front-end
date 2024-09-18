@@ -1,0 +1,10 @@
+<div class="w-100 vh-100 d-flex align-items-center justify-content-center mb-4">
+    <div class="card p-3 m-4" *ngFor="let product of products">
+        <div class="card-text">
+            <h1 class="card-title">{{product.productName}}</h1>
+            <p class="card-subtitle">{{product.productCategory}}</p>
+            <p class="card-text">{{product.productDesc}}</p>
+            <p class="card-text">{{product.productPrice | currency : 'INR'}}</p>
+        </div>
+    </div>
+</div>

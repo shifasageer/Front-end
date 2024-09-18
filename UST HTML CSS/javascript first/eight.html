@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        const square = function(n) {
+            return n*n;
+        }
+
+        // let s = square;
+        //  var result =s(5);
+
+        //  console.log(result);
+
+        //  //-------------------------------------
+        
+        //  const square2 = (n) => {
+        //     return n*n ;
+        //  };
+
+        //  var r = square2(9);
+        //  alert(r);
+
+          //-------------------------------------
+
+
+          const cube1 = (n) => {
+            return n*n*n;
+          }
+
+          //var c = cube1(prompt("enter no"));
+
+          alert(cube1(3));
+
+          //----------------------------------------
+
+          const sum2 = (n,m) => {
+            return n+m;
+          }
+          var s= sum2(9,10)
+          alert(s)
+
+
+          //-----------------------------------------
+
+          //call back functions
+          const isEven = (n) => {
+            return n % 2 == 0;
+          };
+
+          let printMsg = (evenFunc, num) =>{
+            const isNumEven = evenFunc(num);
+            console.log(`${num} is an even number : ${isNumEven}`);
+          };
+
+          printMsg(isEven,16);
+
+        //------------------------------------------------------
+
+          var movie = {name: "Titanic" , year: 1997};
+
+          console.log(movie.name);
+          console.log(movie.year);
+          movie.hero = "Jack";
+          console.log(movie);
+
+        //----------------------------------------------------------------
+
+        var jsonRef = {
+                    data: [
+                        {"company":"google","location":"SanFransico", "Country" : "USA","noemp" : 3000},
+                        { "company":"Infosys","location":"Bengaluru", "Country" : "India", "noemp" : 3000},
+                        { "company":"TCS","location":"Povai Mumbai", "Country" : "India", "noemp" : 3000},
+                        { "company":"UST","location":"Trivandrum", "Country" : "India","noemp" : 3000},
+                        { "company":"Nvidea","location":"SantClara", "Country" : "USA", "noemp" : 3000}
+                    ],
+        };
+
+        console.log(jsonRef.data);
+        console.log(jsonRef.data[0].language="spanish")
+
+        const filteredData = jsonRef.data.filter((item) => 
+            item.Country=="India"
+        );
+        console.log(filteredData)
+
+
+        const totalEmpIndia = filteredData.reduce((total,item)=>total+item.noemp,0);
+        console.log(totalEmpIndia);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

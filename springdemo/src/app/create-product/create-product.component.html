@@ -1,0 +1,63 @@
+<!-- <div class="container">
+    <h2>Create Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input id="productName" formControlName="productName" class="form-control" />
+        <div *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')?.touched" class="text-danger">
+          Product Name is required.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input id="productPrice" formControlName="productPrice" type="number" class="form-control" />
+        <div *ngIf="productForm.get('productPrice')?.invalid && productForm.get('productPrice')?.touched" class="text-danger">
+          Product Price is required and must be a positive number.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea id="productDescription" formControlName="productDescription" class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="productCategory">Product Category</label>
+        <input id="productCategory" formControlName="productCategory" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Create Product</button>
+    </form>
+  </div>
+   -->
+
+
+
+   <div class="create-product-form">
+    <h2>Create New Product</h2>
+    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+      <div>
+        <label for="productName">Product Name:</label>
+        <input id="productName" name="productName" [(ngModel)]="product.productName" required>
+      </div>
+  
+      <div>
+        <label for="productPrice">Product Price:</label>
+        <input id="productPrice" name="productPrice" type="number" [(ngModel)]="product.price" required>
+      </div>
+  
+      <div>
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" [(ngModel)]="product.description" required></textarea>
+      </div>
+  
+      <div>
+        <label for="productCategory">Product Category:</label>
+        <input id="productCategory" name="productCategory" [(ngModel)]="product.category" required>
+      </div>
+  
+      <button type="submit">Create Product</button>
+    </form>
+  </div>
+  

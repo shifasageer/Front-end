@@ -1,0 +1,58 @@
+body{
+
+    margin: 0;
+    background-color: bisque;
+}
+
+div {
+    
+}
+
+header {
+    text-align: center;
+    color: brown;
+}
+main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.sudokubox {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    height: 470px;
+    width: 470px;
+    
+   
+}
+
+.boxbig {
+    border: 1px solid black;
+    padding: 10px;
+    gap: 5px;
+    /* width: 120px;
+    height: 120px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    
+}
+
+.boxbig div {
+    background-color: aliceblue;
+    border: none;
+   
+    /* border: 1px solid black; */
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+}

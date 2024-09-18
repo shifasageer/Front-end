@@ -1,0 +1,40 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.maindiv {
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    align-items: center;
+    justify-content:center;
+    justify-items: center;
+}
+
+
+.col1 {
+    display: grid;
+   /* align-content: stretch;
+   justify-content: stretch; 
+   align-items: center;
+   justify-items: center; */
+
+}
+
+p {
+    color: rgb(5, 41, 73);
+    background-color: #F1EDF2;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+/* .col1
+.col2
+.col3 {
+    width: 33.33%;
+} */

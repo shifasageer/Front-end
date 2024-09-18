@@ -1,0 +1,273 @@
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+   
+
+
+body {
+    margin: 10px;
+    background-color: #f7f2f2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.navleft {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+}
+
+.navleft h1 {
+    color: chocolate;
+    font-size: 29px;
+
+
+}
+.navcentre {
+    
+    display: flex;
+    gap: 20px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 15px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.navcentre a:hover {
+
+  background-color: whitesmoke;
+  border-radius: 10px;
+
+
+}
+
+
+.section1 {
+    width: 50vw;
+}
+
+
+.mainblock {
+
+    gap:20px;
+    height: 200vh;
+    display: grid;
+
+    grid-template-areas: 
+        "card1 card1 card2 card3"
+        "crad4 card5 card6 card3"
+        "card7 card7 card6 card8"
+        "card9 card9 card10 card10";
+
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;    
+}
+
+.card {
+
+    border-radius: 30px;
+    background-color: white;
+}
+
+.card1 {
+    grid-area: card1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+
+.card2 {
+
+    grid-area: card2;
+}
+
+.card3 {
+
+    grid-area: card3;
+}
+
+.card4 {
+  padding: 0;
+
+}
+.card4 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
+}
+
+.card2 {
+  background-image: url('mapimage2.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card2 img {
+ 
+
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+
+}
+
+.card7 {
+    grid-area: card7;
+
+}
+
+.card8 {
+    grid-area: card8;
+
+}
+
+.card9 {
+    grid-area: card9;
+
+}
+
+.card10 {
+    grid-area: card10;
+
+}
+
+
+footer {
+
+}

@@ -1,0 +1,22 @@
+<p>sample-ext works!</p>
+<div>
+    <h3>View All Products from external site</h3>
+   
+    <p></p>
+ 
+    <button (click)="onSubmit2()" class="btn btn-primary">Display All</button>
+
+    <div *ngIf="sampleArray.length>0">
+      <div *ngFor="let product of sampleArray">
+          <p>{{ product.id}}</p>
+          <p>{{ product.title}}</p>
+      </div>
+    </div>  
+    <!-- <div *ngIf="sampleArray.length > 0">
+        <div *ngFor="let item of sampleArray; let i = index">
+          <p *ngIf="i < 10">{{ item.id }}</p>
+          <p *ngIf="i < 10">{{ item.title }}</p>
+        </div>
+      </div> -->
+      
+  </div>

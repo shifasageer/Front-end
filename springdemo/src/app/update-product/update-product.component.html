@@ -1,0 +1,31 @@
+<div class="create-product-form">
+    <h2>Update Existing Product</h2>
+    <form (ngSubmit)="onSubmit2()" #productForm="ngForm">
+
+        <div>
+            <label for="productId">Enter Product Id of Product to update:</label>
+            <input id="productId" name="productId" [(ngModel)]="product.product_id" required>
+          </div>
+      <div>
+        <label for="productName">Product Name:</label>
+        <input id="productName" name="productName" [(ngModel)]="product.productName" required>
+      </div>
+  
+      <div>
+        <label for="productPrice">Product Price:</label>
+        <input id="productPrice" name="productPrice" type="number" [(ngModel)]="product.price" required>
+      </div>
+  
+      <div>
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" [(ngModel)]="product.description" required></textarea>
+      </div>
+  
+      <div>
+        <label for="productCategory">Product Category:</label>
+        <input id="productCategory" name="productCategory" [(ngModel)]="product.category" required>
+      </div>
+  
+      <button type="submit">Create Product</button>
+    </form>
+  </div>

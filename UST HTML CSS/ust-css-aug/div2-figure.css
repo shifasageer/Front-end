@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    /* background-color: black; */
+}
+
+.white {
+    background-color: rgb(223, 236, 144);
+    
+    width: auto;
+    min-height: 100vh;
+}
+
+.fourcolours {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+
+    
+
+}
+
+.red {
+    
+   background-color: whitesmoke;
+  text-align: center;
+  margin: 20px;
+    
+}
+
+.blue {
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 20px;
+}
+
+.yellow {
+    background-color: whitesmoke;
+    text-align: center;
+    
+    margin: 20px;
+
+
+}
+
+.green {
+    text-align: center;
+    background-color: whitesmoke;
+    margin: 20px;
+  
+
+}
+
+.image {
+    /* margin: 20px; */
+}
+
+img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    /* padding: 20px;
+    margin: 20px; */
+}

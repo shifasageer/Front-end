@@ -1,0 +1,39 @@
+<p>view-product works!</p>
+
+<div class="Container">
+    <div>
+      <h3>View All Products</h3>
+     
+      <p></p>
+   
+      <button (click)="onSubmit()" class="btn btn-primary">Display All</button>
+
+      <div *ngIf="productArray.length>0">
+        <div *ngFor="let product of productArray">
+            <p>{{ product.productName}}</p>
+        </div>
+      </div>
+    </div> 
+   
+    <div> 
+        <h3>View Products By Id</h3>
+      <label>Enter the id:</label>
+   
+      <input
+        type="text"
+        name="identity"
+        id="productId"
+        placeholder="Enter ID"
+        [(ngModel)]="product_id"
+      />
+   
+      <p></p>
+      <button (click)="viewProductById()" class="btn btn-primary">
+        Display Product By ID
+      </button>
+    </div> 
+
+
+
+    
+  </div>

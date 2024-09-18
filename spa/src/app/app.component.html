@@ -1,0 +1,11 @@
+<h3><a routerLink="home">Home</a></h3>
+
+<h3><a routerLink="aboutus" >About us</a></h3>
+<h3><a routerLink="register" >Register</a></h3>
+
+<hr>
+
+<h3><button (click)="renderHome('/home')">Home</button></h3>
+<h3><button (click)="renderAboutUs('/aboutus')">About us</button></h3>
+<h3><button (click)="renderRegister('/register')">Register</button></h3>
+<router-outlet></router-outlet>

@@ -1,0 +1,53 @@
+<div class="container">
+
+    Data Component
+    <br>
+
+    
+    <div style=" border: 1px solid black;">
+        <label for="itemFilter">Filter items on Price Range:</label>
+        <select [(ngModel)]="filterPrice" (change)="filterItems2()">
+            <option *ngFor="let product of productData" [value]="product.price">{{product.price}}</option>
+        </select>
+
+            <ul>
+            <li *ngFor="let item of filteredItems2">
+              {{ item.productId }} {{ item.brand }} {{ item.description }} {{ item.qty }} {{ item.price }}
+            </li>
+             </ul>
+    </div>
+    <div  style=" border: 1px solid black;">
+
+        <label for="itemFilter">Filter items on Brand Name:</label>
+        <select id="itemFilter" [(ngModel)]="selectedOption" (change)="filterItems()">
+
+            <option value="">--Select an item--</option>
+            <option value="Tea">Tea</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Reliance">Reliance</option>
+            <option value="Tata">Tata</option>
+            
+        </select>
+        <p>Number of results: {{ filteredItemsCount }}</p>
+        <ul>
+        <li *ngFor="let item of filteredItems">
+            {{ item.productId }} {{ item.brand }} {{ item.description }} {{ item.qty }} {{ item.price }}
+        </li>
+        </ul>
+    </div>
+  
+
+
+    <div *ngFor="let product of productData">
+        {{product.productId}}
+        {{product.brand}}
+        {{product.description}}
+        {{product.qty}}
+        {{product.price}}
+    </div>
+
+ 
+
+
+
+</div>

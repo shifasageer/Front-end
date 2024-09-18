@@ -1,0 +1,111 @@
+<!-- <div class="main1">
+<div class="container" style="border: solid 2px blue;" >
+
+        <h2>Product Data</h2>
+        <p>Product Id:{{productid}}</p>
+        <p>Description:{{Description}}</p>
+        <p>Instock:{{available}}</p>
+        <p>Qty:{{qty}}</p>
+        <p>Enter order quantity: <input type="text" name="orderqty" id="" [(ngModel)]="orderqty" #inputQty>{{orderqty}}</p> -->
+
+      
+        <!-- <p><div*ngIf="orderqty<qty " notavailableblock>Is Ordered qty not available </div> 
+         
+
+        </p> -->
+<!-- 
+        <p>Delivery: <span [style.background-color]= "deliverColor">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+        <div  [innerHTML]="isorderedQtyAvailable"></div>
+        
+        <p>
+          <button name="place Order" (click)="printOrder(inputQty.value)">PLace Order</button>
+        </p>
+
+        
+        <div *ngIf="qty>orderqty ; else myTemplate">Order quantity available</div>
+        <ng-template #myTemplate> Order Quantity not available</ng-template>
+
+        
+        <div *ngFor="let product of products">
+          {{product.productId}}
+          {{product.description}}
+          {{product.price}}
+
+        </div>
+
+        {{orderDate | date : "dd/MMMM/yyyy"}}
+
+        <div [ngSwitch]="inputQty.value">
+          <span *ngSwitchCase="201">..Qty not available</span>
+          <span *ngSwitchCase="200">..Exact one Qty  available</span>
+          <span *ngSwitchCase="199">..Full Qty  available</span>
+          <span *ngSwitchDefault></span>
+
+
+        </div>
+        
+
+
+</div>
+
+<div style="border: solid 2px green">
+  <app-color></app-color>
+</div>
+
+<div style="border: solid 2px brown">
+  <app-data></app-data>
+</div>
+</div>
+
+<div style="border: solid 2px blue">
+  <app-radiobg></app-radiobg>
+
+</div>
+<div *ngFor="let product of products; index as i;even as isEven;">
+  <span  *ngIf="isEven; else template" [style.background-color]="evenColor">
+    {{i}}
+    {{product.productId}}
+    {{product.description}}
+    {{product.price}}
+  </span>
+ <ng-template #template >
+  <span [style.background-color]="oddColor">
+    {{i}}
+    {{product.productId}}
+    {{product.description}}
+    {{product.price}}
+
+  </span>
+   
+
+ </ng-template>
+
+</div>
+ -->
+
+
+
+
+<!-- 
+<div>
+
+  <button name="darktheme" (click)="makeDarkTheme()">Dark theme</button>
+  <button name="Lighttheme" (click)="makeLightTheme()">Light theme</button>
+   
+</div> -->
+
+
+<div class="container">
+  Color Component
+</div>
+
+<input type="text" (keydown)="keyCapture($event.key)">
+<h2>{{title}}</h2>
+<h1>Hello, myapp</h1>
+<h2><button (click)="sendMessage()"></button></h2>
+
+
+<app-color [title]="title">THis is demonstrating after content init</app-color>
+
+

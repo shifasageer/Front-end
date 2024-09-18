@@ -1,0 +1,47 @@
+<div class="w-100 min-vh-100 mb-4 mt-4 d-flex align-items-center justify-content-center">
+    <app-preview [display]="enablePreview" [product]="product" (previewDisplayEvent)="onPreviewClose($event)"></app-preview>
+    <div class="card w-50 p-4">
+        <h1>Create Product</h1>
+        <form action="#" method="post" class="d-grid mt-2 form-group" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="pname" class="form-label">Product name</label>
+                <input type="text" id="pname" class="form-control" name="productName" [(ngModel)]="product.productName" #productName="ngModel" required>
+                <div *ngIf="productName.invalid && productName.touched" class="alert alert-danger mt-3">
+                    <div *ngIf="productName.errors?.['required']">Product Name is Required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="pdesc" class="form-label">Product Description</label>
+                <input type="text" id="pdesc" class="form-control" name="productDesc" [(ngModel)]="product.productDesc" #productDesc="ngModel" required>
+                <div *ngIf="productDesc.invalid && productDesc.touched" class="alert alert-danger mt-3">
+                    <div *ngIf="productDesc.errors?.['required']">Product Description is Required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="pcategory" class="form-label">Product Category</label>
+                <input type="text" id="pcategory" class="form-control" name="productCategory" [(ngModel)]="product.productCategory" #productCategory="ngModel" required>
+                <div *ngIf="productCategory.invalid && productCategory.touched" class="alert alert-danger mt-3">
+                    <div *ngIf="productCategory.errors?.['required']">Product Category is Required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="pprice" class="form-label">Product Price</label>
+                <input type="text" id="pprice" class="form-control" minlength="1" name="productPrice" [(ngModel)]="product.productPrice" #productPrice="ngModel" required>
+                <div *ngIf="productPrice.invalid && productPrice.touched" class="alert alert-danger mt-3">
+                    <div *ngIf="productPrice.errors?.['required']">Product Price is Required</div>
+                    <div *ngIf="productPrice.errors?.['minlength']">Product Price should be Higher than zero</div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" id="ppublish" class="form-check-input me-1" name="productPublish" [(ngModel)]="product.productPublish">
+                <label for="ppublish" class="form-check-label">Publish or Draft</label>
+            </div>
+        
+            <div class="row">
+                <input type="button" value="Preview" class="col btn btn-info me-3 w-50 mb-3" (click)="clickPreview()">
+                <input type="submit" value="Submit" class="col btn btn-primary w-50 mb-3">
+            </div>
+        </form>
+    </div>
+</div>

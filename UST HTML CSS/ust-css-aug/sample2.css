@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+    padding: 30px;
+    margin: 30px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fourcolours {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.red {
+    text-align: end;
+    align-content: end;
+}
+
+.blue {
+    text-align: end;
+}
+
+.yellow {
+    align-content: end;
+}
+
+p{
+    margin: 0;
+}
